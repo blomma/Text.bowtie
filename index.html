@@ -1,100 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<title>Text</title>
-	<style type="text/css">
-		* {
-			overflow:hidden;
-			white-space:nowrap;
-			text-overflow:ellipsis;
-		}
-		body {
-			padding:0;
-			margin:0;
-		}
-		h1 {
-			font-size:40px;
-			font-style:normal;
-			font-weight:normal;
-			font-family:'Bebas neue';
-			padding:0;
-			margin:0;
-			text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-		}
-		h2 {
-			font-size:30px;
-			font-weight:normal;
-			font-style: normal;
-			font-family:'Bebas neue';
-			padding:0;
-			margin:0;
-			text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-		}
-		h3 {
-			font-size:20px;
-			font-weight:bold;
-			font-style: normal;
-			font-family:'Bebas neue';
-			padding:0;
-			margin:0;
-			text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-		}
-		#clear {
-		    height: 40px;
-			clear: both;
-		}
-		#song {
-			float: left;
-			opacity:0.8;
-			color:#FFF;
-		}
-		#artist {
-			float: left;
-			opacity:0.5;
-			color:#FFF;
-		}
-		#album {
-			float: left;
-			padding-left: 20px;
-			opacity:0.8;
-			color:#FFF;
-		}
-		#rating {
-			float: left;
-			padding-left: 20px;
-			opacity:0.8;
-			color:#FFF;
-		}
-		@font-face {
-		    font-family: Bebas neue; src: url('fonts/BebasNeue.otf');
-		}
-	</style>
-	<script type="text/javascript">
-		function $(id) {
-			return document.getElementById(id);
-		}
-
-		function statusChanged() {
-			$('rating').innerHTML = Player.ratingStars()
-		}
-
-		function trackChanged(track) {
-			$('song').innerHTML = track.title || "Nothing Playing";
-			$('artist').innerHTML = track.artist || "";
-			$('album').innerHTML = track.album || "";
-			$('rating').innerHTML = Player.ratingStars()
-		}
-	</script>
-</head>
-<body>
-	<div id="container">
-		<h1 id="song"></h1>
-		<h2 id="rating"></h3>
-		<div id="clear">
-		<h2 id="artist"></h2>
-		<h2 id="album"></h3>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>
+			Text
+		</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="container">
+			<h1 id="song"></h1>
+			<h2 id="rating"></h2>
+			<div class="clear"></div>
+			<h2 id="artist"></h2>
+			<h2 id="album"></h2>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
